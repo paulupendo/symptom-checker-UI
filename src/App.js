@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import AppBar from "material-ui/AppBar";
+import Patient from "./Patient";
+import "./index.css";
 
-class App extends Component {
+const styles = {
+  appbar: {
+    backgroundColor: "rgb(21, 169, 225)",
+    textAlign: "center"
+  }
+};
+
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="body">
+        <AppBar
+          style={styles.appbar}
+          title="Symptom Checker"
+          showMenuIconButton={false}
+        />
+        
+        <Patient />
       </div>
     );
   }
