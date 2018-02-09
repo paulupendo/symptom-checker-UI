@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-
 import registerServiceWorker from './registerServiceWorker';
+import App from './App';
+import 'semantic-ui-css/semantic.min.css';
+import './index.css';
 
-const app= (<MuiThemeProvider> <App/> </MuiThemeProvider>)
-ReactDOM.render(app, document.getElementById('root'));
+const MOUNT_NODE = document.getElementById('root');
+
+ReactDOM.render(<App />, MOUNT_NODE);
 
 registerServiceWorker();
